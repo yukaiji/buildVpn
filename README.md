@@ -1,10 +1,9 @@
 # buildVpn
-## 图文教程搭建一个vpn访问墙外的世界
+### 图文教程搭建一个vpn访问墙外的世界
 
-## 准备工作：有支付宝账户，有一个可用邮箱，有10美元。
+### 准备工作：有支付宝账户，有一个可用邮箱，有10美元。
 
-## 前言：首先我们选择Vultr供应商来购买海外VPS服务器，具有12个地区可以选择，当然也可以选择其他的供应商，但是Vultr的优点在于，所有服务器创建成功后开始计费，并且是按照小时来计费的，如果你删除掉服务器将不再计费。
-        众所周知，目前国内的VPN打击特别严厉，很多VPN已经被封掉了，我们购买的海外服务器也有可能是被墙掉IP或者用一段时间被墙的。所以Vultr可以随时创建一个新的服务器（会分配一个新的ip），删除掉原有的。
+### 前言：首先我们选择Vultr供应商来购买海外VPS服务器，具有12个地区可以选择，当然也可以选择其他的供应商，但是Vultr的优点在于，所有服务器创建成功后开始计费，并且是按照小时来计费的，如果你删除掉服务器将不再计费。众所周知，目前国内的VPN打击特别严厉，很多VPN已经被封掉了，我们购买的海外服务器也有可能是被墙掉IP或者用一段时间被墙的。所以Vultr可以随时创建一个新的服务器（会分配一个新的ip），删除掉原有的。
 
 ### 创建账户及购买VPS服务器
 
@@ -121,13 +120,13 @@ wget -N --no-check-certificatehttps://raw.githubusercontent.com/ToyoDAdoubi/doub
 
 ![第二十四步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102018140.jpg)
 
-## 到此安装就完成了。可以通过客户端进行链接翻墙上网了。
+### 到此安装就完成了。可以通过客户端进行链接翻墙上网了。
 
 ![第二十五步](https://github.com/yukaiji/buildVpn/blob/master/image/2018030710205260.jpg)
 
 
 
-## 为了能够提高上网速度，YouTube从480 体验为1080。我们接下来进行安装加速软件（速锐、BBR两者选其一，不可共存）。
+### 为了能够提高上网速度，YouTube从480 体验为1080。我们接下来进行安装加速软件（速锐、BBR两者选其一，不可共存）。
 
 ### BBR加速（如果需要速锐，跳过此段）
 
@@ -180,9 +179,9 @@ service serverSpeeder status     查看速锐的状态
 service serverSpeeder start | stop | restart  停止暂停重启锐速
 
 
-## 到此为止，通过BBR或速锐加速的VPN服务器已经全部搭建完成了。
+### 到此为止，通过BBR或速锐加速的VPN服务器已经全部搭建完成了。
 
-## 接下来使用SSR或者SS客户端连接即可
+### 接下来使用SSR或者SS客户端连接即可
 
 MAC：https://github.com/shadowsocksr-backup/ShadowsocksX-NG/releases
 WIN：https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases
