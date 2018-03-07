@@ -10,23 +10,35 @@
 
 第一步：登录vultr官网注册一个账户，只需要一个邮箱和密码即可。然后到你注册的邮箱中去验证你的账户。（官网链接https://www.vultr.com/?ref=7348872）
 
-https://github.com/yukaiji/buildVpn/blob/master/image/20180307101419422.jpg
+![第一步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101419422.jpg
 
 第二步：登录你的账户，然后在如图所示地方进行充值。这里我们用支付宝扫码支付比较方便，充值成功后，可以再右上角看到你的账户余额。
 
+![第二步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101506198.jpg
+
 第三步：购买VPS服务器。在Servers标签中看到，我们目前还没有服务器，这时选择右上角的加号新添加一个服务器。
 
+![第三步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101543991.jpg
 
 我们首先选择服务器所在地区，这里我们选择NewYork纽约，一般来说选择日本、纽约、洛杉矶、硅谷都还可以（全看人品）。
+
+![第四步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101558312.jpg
+
 其次我们选择服务器的系统版本。这里注意选择CentOS6 ，默认是7由于防火墙等原因可能会影响接下来的操作。
 
-
+![第五步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101612917.jpg
 
 最后，我们选择每个月2.5刀，500G带宽的就可以了。
+
+![第六步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101629749.jpg
+
 其他的不需要选择，如果需要使用IPv6就在第四部选择。这里我们不选择，默认使用IPv4，最下面我们选择Depliy Now 新建服务器。
 
+![第七步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101643841.jpg
 
 到目前为止我们就已经成功的创建了一个海外服务器。但是这个服务器是否可用，有没有被墙掉呢？当服务器安装完成之后，我们来测试一下。
+
+![第八步]https://github.com/yukaiji/buildVpn/blob/master/image/20180307101656506.jpg
 
 我们可以看到已经在运行的服务器ip为  45.63.7.251 ，接下来就测试一下是否能够连接。
 Win： win + R快捷键或者在开始菜单-附件-运行，调出运行窗口，输入cmd，然后输入ping  45.63.7.251 可以看到是否被墙。（多ping几次）
