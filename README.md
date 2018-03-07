@@ -1,12 +1,12 @@
 # buildVpn
-##图文教程搭建一个vpn访问墙外的世界
+## 图文教程搭建一个vpn访问墙外的世界
 
-##准备工作：有支付宝账户，有一个可用邮箱，有10美元。
+## 准备工作：有支付宝账户，有一个可用邮箱，有10美元。
 
-##前言：首先我们选择Vultr供应商来购买海外VPS服务器，具有12个地区可以选择，当然也可以选择其他的供应商，但是Vultr的优点在于，所有服务器创建成功后开始计费，并且是按照小时来计费的，如果你删除掉服务器将不再计费。
+## 前言：首先我们选择Vultr供应商来购买海外VPS服务器，具有12个地区可以选择，当然也可以选择其他的供应商，但是Vultr的优点在于，所有服务器创建成功后开始计费，并且是按照小时来计费的，如果你删除掉服务器将不再计费。
         众所周知，目前国内的VPN打击特别严厉，很多VPN已经被封掉了，我们购买的海外服务器也有可能是被墙掉IP或者用一段时间被墙的。所以Vultr可以随时创建一个新的服务器（会分配一个新的ip），删除掉原有的。
 
-###创建账户及购买VPS服务器
+### 创建账户及购买VPS服务器
 
 第一步：登录vultr官网注册一个账户，只需要一个邮箱和密码即可。然后到你注册的邮箱中去验证你的账户。官网链接(https://www.vultr.com/?ref=7348872)
 
@@ -88,31 +88,49 @@ wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh 
 yum -y install wget
 wget -N --no-check-certificatehttps://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 
-###安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
+### 安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
 第一步：选择1 
+
 ![第十七步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101902154.jpg)
+
 第二步：直接默认即可。（理论上说是可以随便的，1 - 65535）
+
 ![第十八步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101913385.jpg)
+
 第三步：设置密码
+
 ![第十九步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101927773.jpg)
+
 第四步：加密方式，选择aes-128-cfb就可以
+
 ![第二十步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101937845.jpg)
+
 第五步：协议插件，为了使SS也能够使用，这里选择origin
+
 ![第二十一步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101948387.jpg)
+
 第六步：选择混淆plain
+
 ![第二十二步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101957836.jpg)
+
 第七步：设置连接数量，默认回车即可。然后开始进行安装。
+
 ![第二十三步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102008416.jpg)
+
 如果遇到输入项，问y还是n时，输入y 回车确认。
+
 ![第二十四步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102018140.jpg)
 
-##到此安装就完成了。可以通过客户端进行链接翻墙上网了。
+## 到此安装就完成了。可以通过客户端进行链接翻墙上网了。
+
 ![第二十五步](https://github.com/yukaiji/buildVpn/blob/master/image/2018030710205260.jpg)
 
 
 
-##为了能够提高上网速度，YouTube从480 体验为1080。我们接下来进行安装加速软件（速锐、BBR两者选其一，不可共存）。
-###BBR加速（如果需要速锐，跳过此段）
+## 为了能够提高上网速度，YouTube从480 体验为1080。我们接下来进行安装加速软件（速锐、BBR两者选其一，不可共存）。
+
+### BBR加速（如果需要速锐，跳过此段）
+
 BBR加速特别简单，复制下面脚本代码即可。
 谷歌BBR加速脚本：
 yum -y install wget
@@ -121,26 +139,36 @@ chmod +x bbr.sh
 ./bbr.sh
 
 1、遇到停顿按回车即可。然后继续安装。（多等一会）
+
 ![第二十六步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102104748.jpg)
+
 2、安装完成后问你是否重启，这里输入y，回车。
+
 ![第二十七步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102114503.jpg)
+
 3、重新连接后，输入 lsmod | grep bbr 查看BBR是否启动，可以看到已经启动了。
+
 ![第二十八步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102126665.jpg)
 
 
 
 
-###速锐加速
+### 速锐加速
 1、首先输入
 uname -a 查看内核为
+
 2、然后输入
 cat /etc/redhat-release  查看系统版本
+
 3、下载CentOS 6.6版本的内核（速锐支持6.6版本的）
 wget http://ftp.scientificlinux.org/linux/scientific/6.6/x86_64/updates/security/kernel-2.6.32-504.3.3.el6.x86_64.rpm
+
 4、安装内核
 rpm -ivh kernel-2.6.32-504.3.3.el6.x86_64.rpm --force
+
 5、重启服务器
 reboot
+
 6、安装速锐
 wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
 
@@ -152,16 +180,22 @@ service serverSpeeder status     查看速锐的状态
 service serverSpeeder start | stop | restart  停止暂停重启锐速
 
 
-##到此为止，通过BBR或速锐加速的VPN服务器已经全部搭建完成了。
+## 到此为止，通过BBR或速锐加速的VPN服务器已经全部搭建完成了。
 
-##接下来使用SSR或者SS客户端连接即可
+## 接下来使用SSR或者SS客户端连接即可
+
 MAC：https://github.com/shadowsocksr-backup/ShadowsocksX-NG/releases
 WIN：https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases
 IPHONE：FirstWingy  （商店里有）
 
 以iphone为例：首先右上角加号，添加服务器配置信息。
+
 ![第三十步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102153178.jpg)
+
 然后：填写一开始安装时的信息,保存。如果忘了记得 ./ssr.sh  选择5 查看连接信息
+
 ![第三十一步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102204995.jpg)
+
 这时你可以愉快的翻墙上网了。
+
 ![第三十二步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102258394.jpg)
