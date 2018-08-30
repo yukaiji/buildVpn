@@ -1,4 +1,4 @@
-# buildVpn
+# buildVpn 如果有什么问题，可以给我发邮件 yukaiji@hotmail.com
 ### 图文教程搭建一个vpn访问墙外的世界
 
 ### 准备工作：有支付宝账户，有一个可用邮箱，有10美元。
