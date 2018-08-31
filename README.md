@@ -85,7 +85,7 @@ wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh 
 
 备用脚本（上面的脚步不可用再输入这个）：
 yum -y install wget
-wget -N --no-check-certificatehttps://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 
 ### 安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
 第一步：选择1 
