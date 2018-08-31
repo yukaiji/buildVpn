@@ -79,7 +79,7 @@ Mac + Linux：直接在命令行窗口输入ping  45.63.7.251 （按ctrl + c 退
 
 然后复制下面的一键部署管理脚本，粘贴到窗口中（鼠标右键一下即可粘贴）
 
-CentOS6/Debian6/Ubuntu14 ShadowsocksR一键部署管理脚本：
+CentOS6/Debian6/Ubuntu14 ShadowsocksR一键部署管理脚本(可以把下面命令按&&拆开分步执行)：
 
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 
@@ -190,7 +190,7 @@ service serverSpeeder start | stop | restart  停止暂停重启锐速
 
 MAC：https://github.com/shadowsocksr-backup/ShadowsocksX-NG/releases
 WIN：https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases
-IPHONE：FirstWingy  （商店里有）
+IPHONE：FirstWingy、potatso lite  （商店里有，实在找不到可以弄个美国APPLEID，什么都能下）
 
 以iphone为例：首先右上角加号，添加服务器配置信息。
 
