@@ -80,12 +80,15 @@ Mac + Linux：直接在命令行窗口输入ping  45.63.7.251 （按ctrl + c 退
 然后复制下面的一键部署管理脚本，粘贴到窗口中（鼠标右键一下即可粘贴）
 
 CentOS6/Debian6/Ubuntu14 ShadowsocksR一键部署管理脚本：
-yum -y install wget
+
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 
 备用脚本（上面的脚步不可用再输入这个）：
-yum -y install wget
+
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+
+如果在输入命令式提示wget:command not found，则表示没有wget工具，先输入下面指令进行安装，然后再部署管理脚本
+yum -y install wget
 
 ### 安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
 第一步：选择1 
@@ -132,10 +135,12 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 
 BBR加速特别简单，复制下面脚本代码即可。
 谷歌BBR加速脚本：
-yum -y install wget
-wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-chmod +x bbr.sh
-./bbr.sh
+
+第一个指令：wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+
+第二个指令：chmod +x bbr.sh
+
+第三个指令：./bbr.sh
 
 1、遇到停顿按回车即可。然后继续安装。（多等一会）
 
