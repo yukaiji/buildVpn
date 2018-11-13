@@ -7,7 +7,7 @@
 
 ### 创建账户及购买VPS服务器
 
-第一步：登录vultr官网注册一个账户，只需要一个邮箱和密码即可。然后到你注册的邮箱中去验证你的账户。官网链接(https://www.vultr.com/?ref=7348872)
+第一步：登录vultr官网注册一个账户，只需要一个邮箱和密码即可。然后到你注册的邮箱中去验证你的账户。官网链接(https://www.vultr.com/?ref=7612123)
 
 ![第一步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101419422.jpg)
 
