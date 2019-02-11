@@ -114,6 +114,23 @@ chmod +x shadowsocksR.sh
 最终：安装完成，展示你所设置的内容，可以按照链接信息进行连接(最近较严有可能被墙或者端口被封)
 ![第十六-7步](https://github.com/yukaiji/buildVpn/blob/master/image/new6.png)
 
+安装过后如果想要修改，运行如下相关命令
+
+启动：/etc/init.d/shadowsocks start
+
+停止：/etc/init.d/shadowsocks stop
+
+重启：/etc/init.d/shadowsocks restart
+
+状态：/etc/init.d/shadowsocks status
+
+配置文件路径：/etc/shadowsocks.json  修改文件用vi 或者 vim命令，使用方法百度
+
+日志文件路径：/var/log/shadowsocks.log 
+
+安装路径：/usr/local/shadowsocks/shadowsoks
+
+卸载./shadowsocksR.sh uninstall
 
 备用脚本（上面的脚步不可用再输入这个）：
 
