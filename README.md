@@ -91,6 +91,30 @@ chmod +x shadowsocksR.sh
 
 ./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
 
+### 主脚本安装SSR：
+第一步：设定密码，default 为默认密码
+
+![第十六-1步](https://github.com/yukaiji/buildVpn/blob/master/image/new2.png)
+
+第二步：设定端口，default 为随机生成默认端口
+![第十六-2步](https://github.com/yukaiji/buildVpn/blob/master/image/new3.png)
+
+第三步：设定加密方式，default 为默认加密方式
+![第十六-3步](https://github.com/yukaiji/buildVpn/blob/master/image/new4.png)
+
+第四步：设协议，default 为默认协议
+![第十六-4步](https://github.com/yukaiji/buildVpn/blob/master/image/new1.png)
+
+第五步：设定混淆方式，default 为默认混淆
+![第十六-5步](https://github.com/yukaiji/buildVpn/blob/master/image/new5.png)
+
+第六步：安任意键，回车开始进行安装，安装完成后自动启动
+![第十六-6步](https://github.com/yukaiji/buildVpn/blob/master/image/new7.png)
+
+最终：安装完成，展示你所设置的内容，可以按照链接信息进行连接(最近较严有可能被墙或者端口被封)
+![第十六-7步](https://github.com/yukaiji/buildVpn/blob/master/image/new6.png)
+
+
 备用脚本（上面的脚步不可用再输入这个）：
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
@@ -98,7 +122,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 如果在输入命令式提示wget:command not found，则表示没有wget工具，先输入下面指令进行安装，然后再部署管理脚本
 yum -y install wget
 
-### 安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
+### 备用脚本安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
 第一步：选择1 
 
 ![第十七步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101902154.jpg)
