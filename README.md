@@ -276,7 +276,7 @@ IPHONE：FirstWingy、potatso lite  （商店里有，实在找不到可以弄�
 
 firewall-cmd --list-ports
 
-https://github.com/yukaiji/buildVpn/blob/master/image/port.png
+https://github.com/MaxwellHawk/buildVpn/blob/master/image/port.png
 
 如果没有出现2333/tcp的字样，那么该端口还没有开放。使用以下命令开放相应端口并重启：
 
