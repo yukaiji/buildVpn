@@ -16,7 +16,7 @@
 官网推广链接(https://www.vultr.com/?ref=7800747-4F) 这个链接是官网一个推荐链接，有50刀体验金
 ![第一步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101419422.jpg)
 
-第二步：登录你的账户，然后在如图所示地方进行充值。这里我们用支付宝扫码支付比较方便，充值成功后，可以再右上角看到你的账户余额。
+第二步：登录你的账户，然后在如图所示地方进行充值。这里我们可以使用微信或支付宝扫码支付，充值成功后，可以再右上角看到你的账户余额。
 
 ![第二步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101506198.jpg)
 
@@ -112,6 +112,12 @@ chmod +x shadowsocksR.sh
 第六步：安任意键，回车开始进行安装，安装完成后自动启动
 ![第十六-6步](https://github.com/yukaiji/buildVpn/blob/master/image/new7.png)
 
+当安装出现问题时，有可能是centOS中缺少相应c编译器，可以分别执行以下指令安装编译器后再安装SSR：
+
+yum -y install gcc automake autoconf libtool make
+
+yum -y install gcc-c++
+
 最终：安装完成，展示你所设置的内容，可以按照链接信息进行连接(最近较严有可能被墙或者端口被封)
 ![第十六-7步](https://github.com/yukaiji/buildVpn/blob/master/image/new6.png)
 
@@ -177,7 +183,13 @@ yum -y install wget
 
 ![第二十五步](https://github.com/yukaiji/buildVpn/blob/master/image/2018030710205260.jpg)
 
+如果SSR成功安装，但是不能正常启动，在centOS中主要原因是缺少python环境，利用以下指令进行安装
 
+yum -y install python36
+
+cd /usr/bin
+
+ln -s python3 python
 
 ### 为了能够提高上网速度，YouTube从480 体验为1080。我们接下来进行安装加速软件（速锐、BBR两者选其一，不可共存）。
 
@@ -253,3 +265,21 @@ IPHONE：FirstWingy、potatso lite  （商店里有，实在找不到可以弄�
 这时你可以愉快的翻墙上网了。
 
 ![第三十二步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102258394.jpg)
+
+### 如果使用SSR无法连接网络，则可能是centOS未开放相关端口，接下来查询并开启端口
+
+./ssr.sh 选择5 查看配置信息中的端口号
+
+假如我们使用的是2333端口
+
+用以下指令可以查看是否开启对应端口
+
+firewall-cmd --list-ports
+
+如果没有出现2333/tcp的字样，那么该端口还没有开放。使用以下命令开放相应端口并重启：
+
+firewall-cmd --zone=public --add-port=2333/tcp --permanent
+
+reboot
+
+等待1分钟左右，端口已开放，SSR可以连接
