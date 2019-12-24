@@ -134,6 +134,9 @@ chmod +x shadowsocksR.sh
 
 卸载./shadowsocksR.sh uninstall
 
+
+
+### 备用脚本安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
 备用脚本（上面的脚步不可用再输入这个）：
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
@@ -141,7 +144,6 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 如果在输入命令式提示wget:command not found，则表示没有wget工具，先输入下面指令进行安装，然后再部署管理脚本
 yum -y install wget
 
-### 备用脚本安装SSR：（如果此时链接断了，重连后输入./ssr.sh 就可以进入下面安装操作，以后修改时也输入./ssr.sh）
 第一步：选择1 
 
 ![第十七步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101902154.jpg)
@@ -205,7 +207,10 @@ BBR加速特别简单，复制下面脚本代码即可。
 
 ![第二十八步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307102126665.jpg)
 
+### 备用脚本安装SS：
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 
+第一项选1 python安装，其他选择与主脚本描述一样
 
 
 ### 速锐加速
